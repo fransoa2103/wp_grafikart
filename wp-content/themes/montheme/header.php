@@ -19,7 +19,14 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <?php wp_nav_menu(['theme_location' => 'header-nav']); ?> <!-- use the same name select into register_nav_menu 'header', 'En tête du menu' -->
+                <!-- use the same name select into register_nav_menu 'header-nav', 'En tête du menu' -->
+                <!-- replace attr WP CSS container by attr Bootstrap menu_class -->
+
+                <?php wp_nav_menu([
+                    'theme_location'    => 'header-nav', 
+                    'container'         => false,
+                    'menu_class'        => 'navbar-nav mr-auto'
+                    ]); ?> 
                 <!--
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
