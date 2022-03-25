@@ -1,9 +1,13 @@
 <?php 
-// before create scratch theme, we must use add_them_support
+// before create WP theme from scratch, we must read before use add_them_support
+// https://developer.wordpress.org/reference/functions/add_theme_support/
+
 function montheme_supports()
 {
-    add_theme_support('title-tag'); // title page
-    add_theme_support('post-thumbnails'); 
+    add_theme_support('title-tag'); // This feature allows themes to add document title tag to HTML <head>
+    add_theme_support('post-thumbnails'); // Display the post thumbnail // https://developer.wordpress.org/reference/functions/the_post_thumbnail/
+    add_theme_support('menus'); // Registers a navigation menu location for a theme // https://developer.wordpress.org/reference/functions/register_nav_menu/
+    register_nav_menu('header-nav', 'En tête du menu'); // Displays a navigation menu // https://developer.wordpress.org/reference/functions/wp_nav_menu/
 }
 
 // register libraries
