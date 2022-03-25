@@ -12,8 +12,8 @@
     <div class="container">
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">Navbar</a>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark mb-4">
+            <a class="navbar-brand" href="#"><?= bloginfo('name') ?></a> <!-- https://developer.wordpress.org/reference/functions/bloginfo/ -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -26,7 +26,7 @@
                     'theme_location'    => 'header-nav', 
                     'container'         => false,
                     'menu_class'        => 'navbar-nav mr-auto'
-                    ]); ?> 
+                ]); ?> 
                 <!--
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">
