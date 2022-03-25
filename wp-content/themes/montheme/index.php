@@ -14,6 +14,8 @@
                         <h6 class="card-subtitle mb-2 text-muted"><?php the_category(); ?></h6>
                         <p class="card-text">
                             <?php the_content('En voir plus'); ?>
+                            <span>édité à <?php the_time(); ?></span>
+                            <span>id n° <?php the_ID(); ?></span>
                         </p>
                         <a href="<?php the_permalink(); ?>" class="card-link">Voir plus</a>
                         <a href="#" class="card-link">Another link</a>
@@ -26,7 +28,8 @@
     <!-- /end/div/class row -->
 
 <?php else : ?>
-    <h3>pas d'articles en cours</h3>
+    <!-- <h3>pas d'articles en cours</h3> -->
+    <p><?php esc_html_e( 'Sorry, no posts matched your criteria.' ); ?></p>
 <?php endif ?>
 
 <?php get_footer() ?>

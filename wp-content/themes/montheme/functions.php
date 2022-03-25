@@ -1,9 +1,9 @@
 <?php 
-// 
+// before create scratch theme, we must use add_them_support
 function montheme_supports()
 {
-    add_theme_support('title-tag');
-    add_theme_support('post-thumbnails');
+    add_theme_support('title-tag'); // title page
+    add_theme_support('post-thumbnails'); 
 }
 
 // register libraries
@@ -12,9 +12,9 @@ function montheme_register_assets()
     wp_register_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css');
     
     // parameters
-    // install popper and jquery with dependencies injection in array []
-    // version of bootstrap, jquery and JS no specified then = false 
-    // do you want load scripts in footer ? yes = true
+    // 1st arg = install popper and jquery with dependencies injection in array []
+    // 2nd arg = versions of bootstrap, jquery and JS no specified then = false 
+    // 3rd arg = do you want load scripts in footer ? 'yes' then = true
 
     wp_register_script('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js',['popper', 'jquery'], false, true);
     wp_register_script('popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js', [], false, true);
